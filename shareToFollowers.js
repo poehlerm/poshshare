@@ -1,13 +1,13 @@
 //Share all items to followers
-var listing = document.querySelectorAll('.listing-con');
-var buttons = document.querySelectorAll('a.share');
+var listing = document.querySelectorAll('.tile');
+var buttons = document.querySelectorAll('.share-gray');
 var i = 0;
 
 //share all available items
 function shareAllItems() {
   setTimeout(function () {
     buttons[buttons.length - 1 - i].click();
-    var sharebutton = document.querySelector(".btn-pm-follower-share");
+    var sharebutton = document.querySelector(".pm-followers-share-link");
     //sharebutton[1].click();
     sharebutton.click();
     i++;
