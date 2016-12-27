@@ -1,20 +1,19 @@
 //Share all items to followers
-var listing = document.querySelectorAll('.tile');
-var buttons = document.querySelectorAll('.share-gray');
+var buttons = document.querySelectorAll('.share');
 var i = 0;
 
-//share all available items
-function shareAllItems() {
-  setTimeout(function () {
-    buttons[buttons.length - 1 - i].click();
-    var sharebutton = document.querySelector(".pm-followers-share-link");
-    //sharebutton[1].click();
-    sharebutton.click();
-    i++;
-    if(buttons.length - i > 0) {
-      shareAllItems();
-    }
-  }, 500)
+setTimeout(function() { shareButton(); }, 500);
+function shareButton() {
+  buttons[buttons.length - 1 - i].click();
+  if(buttons.length - i > 0) {
+    setTimeout(function() { shareToFollowers(); }, 500);
+  }
 }
-
-shareAllItems(); 
+function shareToFollowers() {
+  var sharebutton = document.querySelector(".pm-followers-share-link");
+  sharebutton.click();
+  i++;
+  if(buttons.length - i > 0) {
+    setTimeout(function() { shareButton(); }, 500);
+  }
+}
