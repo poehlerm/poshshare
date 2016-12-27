@@ -4,7 +4,7 @@ var i = 0;
 
 function shareButton() {
   buttons[buttons.length - 1 - i].click();
-  i++;
+  i++; i++;
   if(buttons.length - i > 0) {
     setTimeout(function() { shareToParty(); }, 500);
   }
