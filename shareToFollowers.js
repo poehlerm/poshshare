@@ -1,19 +1,19 @@
 //Share all items to followers
 var buttons = document.querySelectorAll('.share');
-var i = 0;
+var i = buttons.length;
 
 setTimeout(function() { shareButton(); }, 500);
 function shareButton() {
-  buttons[buttons.length - 1 - i].click();
-  i++;
-  if(buttons.length - i > 0) {
+  buttons[i - 1].click();
+  if(i > 0) {
     setTimeout(function() { shareToFollowers(); }, 500);
   }
 }
 function shareToFollowers() {
-  var sharebutton = document.querySelector(".pm-followers-share-link");
+  var sharebutton = document.querySelector(".pm-logo-burgundy");
   sharebutton.click();
-  if(buttons.length - i > 0) {
+  if(i > 0) {
     setTimeout(function() { shareButton(); }, 500);
+    i--;
   }
 }
