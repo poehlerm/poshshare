@@ -10,7 +10,7 @@ function shareButton() {
   }
 }
 function shareToParty() {
-  var sharebutton = document.querySelector(".party-burgundy");
+  var sharebutton = document.querySelector(".party-burgundy") || document.querySelector(".btn-pm-party-share");
   sharebutton.click();
   if(i > 0) {
     setTimeout(function() { shareButton(); }, 500);
