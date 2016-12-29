@@ -14,6 +14,6 @@ function shareToParty() {
   sharebutton.click();
   if(i > 0) {
     setTimeout(function() { shareButton(); }, 500);
-    i--;
+    i--; i--;
   }
 }
