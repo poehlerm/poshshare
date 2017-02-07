@@ -10,7 +10,7 @@ function shareButton() {
   }
 }
 function shareToFollowers() {
-  var sharebutton = document.querySelector("pm-followers-share-link grey");
+  var sharebutton = document.querySelector(".pm-followers-share-link");
   sharebutton.click();
   if(i > 0) {
     setTimeout(function() { shareButton(); }, 500);
